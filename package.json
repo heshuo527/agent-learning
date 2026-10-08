@@ -1,0 +1,25 @@
+{
+  "name": "agent-learning",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "day1": "tsx src/week1/day1-chat.ts",
+    "day2": "tsx src/week1/day2-manual-tool.ts",
+    "day3": "tsx src/week1/day3-loop.ts",
+    "day4": "tsx src/week1/day4-multi-tools.ts",
+    "day5": "tsx src/week1/day5-description.ts",
+    "day6": "tsx src/week1/day6-stream.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "dotenv": "^17.0.0",
+    "openai": "^4.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  }
+}
