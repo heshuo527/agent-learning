@@ -11,7 +11,7 @@ import OpenAI from 'openai';
  * 改 .env 里这三个变量就够了,这个文件不用动。
  */
 
-const apiKey = process.env.DASHSCOPE_API_KEY;
+const apiKey = process.env.MINIMAX_API_KEY;
 
 if (!apiKey) {
   throw new Error(
@@ -28,9 +28,9 @@ export const client = new OpenAI({
    * https://dashscope-intl.aliyuncs.com/compatible-mode/v1
    */
   baseURL:
-    process.env.DASHSCOPE_BASE_URL ??
+    process.env.MINIMAX_BASE_URL ??
     'https://dashscope.aliyuncs.com/compatible-mode/v1',
 });
 
 /** 默认用 qwen-plus:工具调用(function calling)稳定,价格适中,适合整个学习周期。 */
-export const MODEL = process.env.MODEL ?? 'qwen-plus';
+export const MODEL = process.env.MINIMAX_MODEL ?? 'qwen-plus';

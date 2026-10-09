@@ -137,8 +137,6 @@ export function logUsage(
   usage: { prompt_tokens?: number; completion_tokens?: number; total_tokens?: number } | undefined,
   ms: number,
 ): void {
-  console.log('_____1111', usage);
-  
   if (!usage) return;
   console.log(
     `  [step ${step}] ${ms}ms  ` +
