@@ -8,10 +8,16 @@
   var navEl = document.getElementById('topicNav');
   var mainEl = document.getElementById('main');
 
-  /* 「回学习文档」是本地才有的相对路径,部署到服务器上会 404,所以只在 file:// 下显示 */
+  /* 「回学习文档」的地址取决于是本地打开还是部署后访问:
+   *   本地 file:// → 指向同目录的原始 .md
+   *   部署到服务器  → 指向预渲染好的 HTML(/docs/learning.html)
+   */
   (function () {
     var link = document.getElementById('docLink');
-    if (link && location.protocol === 'file:') link.hidden = false;
+    if (!link) return;
+    link.href =
+      location.protocol === 'file:' ? '../AGENT-LEARNING.md' : '/docs/learning.html';
+    link.hidden = false;
   })();
 
   /* ------------------------------------------------------------------ *

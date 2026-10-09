@@ -2,3 +2,6 @@ node_modules/
 .env
 *.log
 .DS_Store
+
+# 文档站的构建产物(用 node scripts/build-docs.mjs 重新生成)
+docs-dist/

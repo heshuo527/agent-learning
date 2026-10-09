@@ -10,7 +10,9 @@
     "day4": "tsx src/week1/day4-multi-tools.ts",
     "day5": "tsx src/week1/day5-description.ts",
     "day6": "tsx src/week1/day6-stream.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "docs": "node scripts/build-docs.mjs",
+    "docs:deploy": "node scripts/build-docs.mjs && bash scripts/deploy-docs.sh"
   },
   "dependencies": {
     "dotenv": "^17.0.0",
@@ -19,6 +21,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
+    "marked": "^18.1.0",
     "tsx": "^4.0.0",
     "typescript": "^5.0.0"
   }
